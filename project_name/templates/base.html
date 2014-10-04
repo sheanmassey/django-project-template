@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "libs/bootstrap3/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "libs/bootstrap3/css/bootstrap-theme.min.css" %}">
+    <link rel="stylesheet" href="{% static "libs/bootstrap3/css/bootstrap-glyphicons.min.css" %}">
+</head>
+<body>
+    {% block base_content %}{% endblock base_content %}
+    <script src="{% static "libs/jquery.min.js" %}"></script>
+    <script src="{% static "libs/bootstrap3/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "libs/knockout-3.1.0.js" %}"></script>
+    {% block base_scripts %}{% endblock base_scripts %}
+</body>
+</html>
