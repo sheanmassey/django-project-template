@@ -2,19 +2,22 @@
 
 Use the template to create new projects:
 
-```shell
+```shellsession
 # django-admin.py startproject --template=https://github.com/sheanmassey/django-project-template/archive/master.zip new_project
 # chmod +x new_project/manage.py
 ```
 
 Or maybe better, script a .bashrc function:
 
-```shell
+```bash
 function django-admin-startproject() {
     local _PROJECT_NAME="$1"; shift;
     local _TEMPLATE="https://github.com/sheanmassey/django-project-template/archive/master.zip";
+
     django-admin.py startproject --template="${_TEMPLATE}" "${_PROJECT_NAME}";
     chmod +x "${_PROJECT_NAME}/manage.py";
+    ./${_PROJECT_NAME}/manage.py migrate
+    ./${_PROJECT_NAME}/manage.py createsuperuser --noinput --email="admin@localhost" --username="admin"
 }
 ```
 
