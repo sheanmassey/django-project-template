@@ -15,9 +15,11 @@ function django-admin-startproject() {
     local _TEMPLATE="https://github.com/sheanmassey/django-project-template/archive/master.zip";
 
     django-admin.py startproject --template="${_TEMPLATE}" "${_PROJECT_NAME}";
+    
     chmod +x "${_PROJECT_NAME}/manage.py";
+    
     ./${_PROJECT_NAME}/manage.py migrate
-    ./${_PROJECT_NAME}/manage.py createsuperuser --noinput --email="admin@localhost" --username="admin"
+    ./${_PROJECT_NAME}/manage.py createsuperuser
 }
 ```
 
