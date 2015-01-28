@@ -36,9 +36,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.admindocs',
     # 3rd party apps:
     # 'rest_framework',
-    # 'django_extensions',
+    'django_extensions',
     # local apps:
     '{{ project_name }}.core',
 )
@@ -89,18 +90,18 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, '{{ project_name }}', 'static'),
+    os.path.join(BASE_DIR, 'static'),
     # '/var/www/static/',
 )
 
 # Template files
 
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, '{{ project_name }}', 'templates'),
+    os.path.join(BASE_DIR, 'templates'),
 )
 
 # Media files (uploads)
 
-MEDIA_ROOT = os.path.join(BASE_DIR, '{{ project_name }}', 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
