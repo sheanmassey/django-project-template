@@ -14,7 +14,7 @@ function django-admin-startproject() {
     local _PROJECT_NAME="$1"; shift;
     local _TEMPLATE="https://github.com/sheanmassey/django-project-template/archive/master.zip";
 
-    django-admin.py startproject --template="${_TEMPLATE}" "${_PROJECT_NAME}";
+    django-admin.py startproject --template="${_TEMPLATE}" "${_PROJECT_NAME}" --names gulpfile.js;
     
     chmod +x "${_PROJECT_NAME}/manage.py";
     
