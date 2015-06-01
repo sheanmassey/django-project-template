@@ -4,3 +4,4 @@
 *.po
 *~
 *.log
+node_modules/
