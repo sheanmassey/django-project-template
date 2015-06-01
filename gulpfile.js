@@ -14,9 +14,10 @@ gulp.task('js', function(){
             './{{ project_name }}/static/bower_components/angular-animate/angular-animate.js',
             './{{ project_name }}/static/bower_components/angular-local-storage/dist/angular-local-storage.js',
 
-            // morris.js charts:
             './{{ project_name }}/static/bower_components/jquery/dist/jquery.js',
             './{{ project_name }}/static/bower_components/jquery-ui/jquery-ui.js',
+
+            './{{ project_name }}/static/bower_components/bootstrap/dist/js/bootstrap.js',
 
             // custom app:
             './{{ project_name }}/static/src/app.js',
@@ -30,9 +31,8 @@ gulp.task('js', function(){
 
 gulp.task('sass', function(){
     return gulp.src([
-            // morris.js dep:
-            './{{ project_name }}/static/bower_components/morris.js/morris.css',
-
+            './{{ project_name }}/static/bower_components/bootstrap/dist/css/bootstrap.css',
+            './{{ project_name }}/static/bower_components/bootstrap/dist/css/bootstrap-theme.css',
             // custom app:
             './{{ project_name }}/static/src/*.scss'])
         .pipe(concat('style.css'))
