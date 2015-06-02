@@ -20,6 +20,7 @@ function django-admin-startproject() {
     
     ./${_PROJECT_NAME}/manage.py migrate
     ./${_PROJECT_NAME}/manage.py createsuperuser
+    cd "./${_PROJECT_NAME}" npm install && gulp;
 }
 ```
 
